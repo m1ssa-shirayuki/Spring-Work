@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドラゴンボール紹介サイト</title>
+    <link rel="icon" href="../img/四星球.png">
+    <style>
+        #container {
+            width: 100%;
+            height: 100%;
+            padding-left: 200px;
+        }
+        header {
+            position: fixed;
+            width: 200px; /* サイドバーの幅 */
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fe7000;
+            z-index: 900;
+            display: flex;
+            flex-direction: column; /* 縦並びに */
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
+        #navigation {
+            width: 100%;
+            font-size: 18px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #navigation .menu {
+            border-bottom: 1px solid black;
+            padding: 15px 10px;
+            text-align: left;
+
+        }
+        #navigation .menu a {
+            text-decoration: none;
+            color: white; 
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s ease;
+        }
+        #navigation .menu a:hover {
+            color: black;
+        }
+        .menu_logo {
+            margin: 20px 0; /* ロゴ部分の余白を設定 */
+        }
+        .menu_logo a {
+            display: block; /* 全体をリンク可能にする */
+        }
+        .menu_logo img {
+            width: 150px; /* ロゴ画像の幅 */
+            height: auto; /* 縦横比を維持 */
+            cursor: pointer; /* カーソルをリンクとして表示 */
+            transition: transform 0.3s ease; /* ホバー時の動きをスムーズに */
+        }
+        .menu_logo img:hover {
+            transform: scale(1.2);
+        }
+        .bg {
+            margin-left: 0;
+            width: 85%;
+            height: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bg img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .bg2 {
+            position: relative;
+            margin-left: 0;
+            width: 90%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bg2 img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .bg2 .description {
+            position: relative;
+            color: rgb(39, 39, 39);
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+        }
+        .bg2 .description h2 {
+            font-size: 45px;
+            margin-top: 20%;
+            margin-bottom: 10%;
+            color: #642b00;
+        }
+        .bg2 .description p {
+            font-size: 24px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="sibedar" class="no">
+            <h1 class="menu_logo">
+                <a href="../Top/home.html">
+                    <img src="../img/神龍.png" alt="神龍">
+                </a>
+            </h1>
+            <ul id="navigation">
+                <li class="menu"><a href="../Top/home.html">TOP</a></li>
+                <li class="menu"><a href="../The work/work.html">WORK</a></li>
+                <li class="menu"><a href="../Character/characters.html">CHARACTER</a></li>
+                <li class="menu"><a href="../Favorite/favorite.html">FAVORITE</a></li>
+            </ul>
+        </header>
+        <main id="main_page">
+            <section class="bg">
+                <img src="../img/bg.jpg" alt="ドラゴンボール背景">
+            </section>
+            <section class="bg2">
+                <img src="../img/bg2.jpg" alt="ドラゴンボール背景２">
+                <div class="description">
+                    <h2>ドラゴンボールという物語</h2>
+                    <p>
+                        「ドラゴンボール」は、世界中に散らばっており７つ集めると、どんな願いもかなえてくれるという”ドラゴンボール”を集める冒険を描いた、鳥山明による長編漫画作品。
+                        主人公・孫悟空を中心に繰り広げられる冒険やバトル、友情が数多く読者たちの心を掴んでいる。
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

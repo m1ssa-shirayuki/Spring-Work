@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドラゴンボール紹介サイト</title>
+    <link rel="icon" href="../img/四星球.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../img/bg3.jpg') no-repeat center center fixed; /* 背景画像を指定 */
+            background-size: cover; /* 画像をページ全体に広げる */
+            opacity: 0.3; /* 背景画像の透明度を低くしてさらに薄く見せる */
+            z-index: -1; /* 背面に配置してコンテンツと重ならないようにする */
+        }    
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            height: 90px;
+            top: 0;
+            left: 0;
+            background-color: #fe7000;
+            z-index: 900;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #navigation {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0; 
+        }
+        #navigation .menu {
+            border-right: 1px solid black;
+            padding: 10px 20px;
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+        #navigation .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+            margin-right: 50px;
+            transition: color 0.3s ease;
+        }
+        #navigation .menu a:hover {
+            color: black;
+        }
+        .menu_logo {
+            margin-left: 40px;
+            margin-right: 50px;
+        }
+        .menu_logo img {
+            width: 150px;
+            height: auto;
+        }
+        #header img {
+            width: 120px;
+            height: 90px;
+            transition: transform 0.3s ease;
+        }
+        #header img:hover {
+            transform: scale(1.2,1.2);
+            transition-duration: 0.5s;
+        }
+        .poster {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .poster img.chara_image {
+            width: 300px;
+            height: aoto;
+            margin-right: 20px;
+            margin-top: 40%;
+            padding-top: 50%;
+        }
+        .title {
+            text-align: center;
+            margin-top: 10%;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fe3700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .grids {
+            display: grid;
+            grid-template-columns: 460px 300px;
+            grid-template-rows: 180px 180px;
+            margin-left: 20%;
+            margin-bottom: 20%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* 左: 名前と説明、右: 画像 */
+            grid-template-rows: auto auto;
+            gap: 10px;
+            width: 80%;
+            max-width: 1000px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .name, .description {
+            grid-column: 1 / 2; /* 左側に配置 */
+            text-align: center; /* 水平中央揃え */
+            align-self: center; /* 垂直中央揃え */
+        }
+        .image {
+            grid-column: 2 / 3; /* 右側に配置 */
+            grid-row: 1 / 3; /* 縦方向に名前・説明の全体を占有 */
+            text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            max-width: 700px; /* 大きめに調整 */
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .name {
+            grid-row: 1 / 2; /* 上部に配置 */
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 20%;
+        }
+        .description {
+            grid-row: 2 / 3; /* 下部に配置 */
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="header" class="no">
+            <h1 class="menu_logo">
+                <a href="../Top/home.html">
+                    <img src="../img/神龍.png" alt="神龍">
+                </a>
+            </h1>
+            <ul id="navigation">
+                <li class="menu"><a href="../Top/home.html">TOP</a></li>
+                <li class="menu"><a href="../The work/work.html">WORK</a></li>
+                <li class="menu"><a href="../Character/characters.html">CHARACTER</a></li>
+                <li class="menu"><a href="../Favorite/favorite.html">FAVORITE</a></li>
+            </ul>
+        </header>
+        <div class="title">
+            <h1>主な登場人物</h1>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/悟空.png" alt="孫悟空">
+            </div>
+            <h2 class="name">孫悟空</h2>
+            <p class="explanation">ドラゴンボールの主人公。修行と食べること、そして強い相手と戦うことが大好き。
+                少年期にブルマと出会い冒険を始め、たくさんの仲間や敵に会ってきたことで際限なく強くなっていった。
+                戦い好きなのは戦闘民族サイヤ人だからであるが幼少期に頭を強く打ったことでサイヤ人らしからぬ穏やかな心を持っているため、むやみな殺しを嫌っている。
+                多くの敵たちに立ち向かい地球の平和を守っている。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/ベジータ.png" alt="ベジータ">
+            </div>
+            <h2 class="name">ベジータ</h2>
+            <p class="explanation">惑星ベジータの王子のサイヤ人。地球に初めて来たときに悟空との死闘を繰り広げたが、敗北してしまい悟空によって命からがら地球を脱出した。
+                ナメック星編以降はブルマの家に居候し、その後は家族の一員として暮らしている。いつか必ず悟空を倒し超えて見せるという強い闘志を燃やし、日々鍛錬を行っている。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/悟飯.png" alt="孫悟飯">
+            </div>
+            <h2 class="name">孫悟飯</h2>
+            <p class="explanation">孫悟空の長男。幼少期は泣き虫だったが高い潜在能力を秘めているため、感情の高ぶりによってとてつもないパワーを見せていた。
+                セル編では悟飯が超サイヤ人２に覚醒し、宇宙一の力を見せ世界を救った。魔人ブウ編以降はビーデルと結婚し、学者として平和な生活を送っていいる。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/クリリン.png" alt="クリリン">
+            </div>
+            <h2 class="name">クリリン</h2>
+            <p class="explanation">悟空とは、少年期に共に亀仙人の修行を受けた心友。
+                地球人の中では最強であり、悟空たちに劣りながらも全力で強敵に立ち向かっている。魔人ブウ編あたりでは人造人間１８号と結婚してマーロンという娘もできている。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/悟天.png" alt="孫悟天">
+            </div>
+            <h2 class="name">孫悟天</h2>
+            <p class="explanation">孫悟空の次男。悟飯と同じく潜在能力が高いのかいつの間にかすぐに超サイヤ人になれていた。友達のトランクスと仲良しで魔人ブウ編では悟空から教わったフュージョンでゴテンクスとなり戦っていた。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/トランクス.png" alt="トランクス">
+            </div>
+            <h2 class="name">トランクス</h2>
+            <p class="explanation">ベジータとブルマの息子。同じく超サイヤ人にはすぐになることができた。とてもやんちゃな性格で悟天と共に自由な行動をとる。
+                成長した姿は未来トランクスとは違い落ち着いた雰囲気はなくやんちゃなまま育っている。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/ピッコロ.png" alt="ピッコロ">
+            </div>
+            <h2 class="name">ピッコロ</h2>
+            <p class="explanation">ナメック星人。元は神様と分裂したピッコロ大魔王から産み落とされた言わば生まれ変わり。最初は悟空と敵対していたが、度重なる強敵たちとの戦いや悟飯との掛け合いもあり、共に戦っている。今では神様と再び同化している。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/ブルマ.png" alt="ブルマ">
+            </div>
+            <h2 class="name">ブルマ</h2>
+            <p class="explanation">カプセルコーポレーションの娘でベジータの妻。子供はトランクスとブラがいる。悟空と出会いドラゴンボール探しの冒険をしていた。頭は良いが中々に気が強い。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/チチ.png" alt="チチ">
+            </div>
+            <h2 class="name">チチ</h2>
+            <p class="explanation">悟空の妻。悟空とは幼いころに出会い、悟空に股間を叩かれたことで結婚するしかないと決意し、その数年後天下一武道会で悟空と再会し、その場で結婚した。
+                悟飯が生まれてからは完全な教育ママになっている。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/亀仙人.png" alt="亀仙人">
+            </div>
+            <h2 class="name">亀仙人</h2>
+            <p class="explanation">亀川流の師範。悟空やクリリンなどを弟子にとり様々な武術を教え込んでいた。
+                時にはジャッキー・チュンとしてお忍びで天下一武道会に出場したりしていた。それとは裏腹にかなりのエロ爺である。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/ヤムチャ.png" alt="ヤムチャ">
+            </div>
+            <h2 class="name">ヤムチャ</h2>
+            <p class="explanation">悟空が少年期のころに出会った元盗賊。相棒のプーアルととも通る者から盗みを行っていたが、悟空と会って以降は武闘家として修行に励んでいる。
+            </p>
+        </div>
+        <div class="grids">
+            <div class="poster">
+                <img class="chara_image" src="../img/天津飯.png" alt="天津飯">
+            </div>
+            <h2 class="name">天津飯</h2>
+            <p class="explanation">超戦士の一人。もとは餃子とともに鶴専任の元で修行し悪さをしていたが、心を入れ替え悟空たちと共に強敵に立ち向かっている。
+                Ｚ後半や超あたりではみんなの元を離れ、餃子とともに修行している。
+            </p>
+        </div>
+    </div>
+</body>
+</html>

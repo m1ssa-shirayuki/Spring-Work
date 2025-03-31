@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドラゴンボール紹介サイト</title>
+    <link rel="icon" href="../img/四星球.png">
+    <style>
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../img/bg3.jpg') no-repeat center center fixed; /* 背景画像を指定 */
+            background-size: cover;
+            opacity: 0.3; 
+            z-index: -1; 
+        }    
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            height: 90px;
+            top: 0;
+            left: 0;
+            background-color: #fe7000;
+            z-index: 900;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #navigation {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0; 
+        }
+        #navigation .menu {
+            border-right: 1px solid black;
+            padding: 10px 20px;
+            margin-left: 30px;
+            margin-right: 20px;
+        }
+        #navigation .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+            margin-right: 50px;
+            transition: color 0.3s ease;
+        }
+        #navigation .menu a:hover {
+            color: black;
+        }
+        .menu_logo {
+            margin-left: 40px;
+            margin-right: 50px;
+        }
+        .menu_logo img {
+            width: 150px;
+            height: auto;
+        }
+        #header img {
+            width: 120px;
+            height: 90px;
+            transition: transform 0.3s ease;
+        }
+        #header img:hover {
+            transform: scale(1.2,1.2);
+            transition-duration: 0.5s;
+        }
+        .work {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .poster {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10%;
+            margin-bottom: 10px;
+        }
+        .title h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }    
+        .work_image {
+            max-width: 300px;
+            margin-bottom: 15px; 
+            border: 2px solid #fe7000;
+        }    
+        .description {
+            max-width: 150px;
+            line-height: 1.6;
+            text-align: center;
+            color: #333;
+        }    
+        .description h1 {
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        .description p {
+            margin-top: 0;
+        }
+        p {
+            width: 50%;
+            font-size: 21px;
+            text-align: center;
+        }
+        .works {
+            margin-top: 10%;
+            text-align: center;
+            font-size: 50px;
+            color: #fe2600;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* アニメーションを1.5秒に延長 */
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="header" class="no">
+            <h1 class="menu_logo">
+                <a href="../Top/home.html">
+                    <img src="../img/神龍.png" alt="神龍">
+                </a>
+            </h1>
+            <ul id="navigation">
+                <li class="menu"><a href="../Top/home.html">TOP</a></li>
+                <li class="menu"><a href="../The work/work.html">WORK</a></li>
+                <li class="menu"><a href="../Character/characters.html">CHARACTER</a></li>
+                <li class="menu"><a href="../Favorite/favorite.html">FAVORITE</a></li>
+            </ul>
+        </header>
+        <h1 class="works">アニメシリーズ一覧</h1>
+        <main id="work">
+            <div class="poster fade-in">
+                <div class="title">
+                    <h1>ドラゴンボール</h1>
+                </div>
+                <img class="work_image" src="../img/DB.jpg" alt="DB">
+                <p>ドラゴンボールシリーズ第１作品目。<br>
+                    山奥に暮らす少年・孫悟空が秘宝・ドラゴンボールを探し世界を周っている少女・ブルマとの出会いから始まる摩訶不思議アドベンチャー。
+                    悟空はドラゴンボールと修行や強いやつを求めて冒険へ繰り出していく。様々な出会い、経験、戦いを経て成長していく。</p>
+            </div>
+            <div class="poster fade-in">
+                <div class="title">
+                    <h1>ドラゴンボールZ</h1>
+                </div>
+                <img class="work_image" src="../img/Z.jpg" alt="DBZ">
+                <p>ドラゴンボールシリーズ第２作品目。<br>
+                    ピッコロとの戦いから約５年の年月が経った物語であり、悟空のもとに、実兄・ラディッツが宇宙より来襲し、自分が惑星ベジータの戦闘民族・サイヤ人であることを知らされる。
+                    さらわれた孫悟飯を助けるため悟空は宿敵ピッコロと手を組み、自らの命と引き換えにラディッツを倒すが、約１年後にはさらに強力なサイヤ人たちがドラゴンボールを求めて地球に来襲することを知る。<br>
+                    そこから「サイヤ人編」「フリーザ（ナメック星）編」「人造人間・セル編」「魔人ブウ編」と物語の区切りも多くその分数多くの強敵たちが悟空たちに立ちはだかる。<br>
+                    熱い死闘、友情、感動の溢れる作品となっている。
+                </p>
+            </div>
+            <div class="poster fade-in">
+                <div class="title">
+                    <h1>ドラゴンボールGT</h1>
+                </div>
+                <img class="work_image" src="../img/GT.jpg" alt="DBGT">
+                <p>悟空がウーブと修行の旅に出てから5年。ウーブと修行の最終試験を行っているころ、神殿に忍び込んだピラフ一味が黒星の「究極のドラゴンボール」を見つけ願いをかなえようとしたところで悟空に見つかってしまい、その時の会話を神龍が勘違いし、悟空は子供の姿にされてしまう。
+                    しかも究極のドラゴンボールは宇宙中に散らばり、１年以内に元の場所に戻さないと地球は爆発してしまうという。悟空は、パンやトランクスと共にドラゴンボールを集めるため宇宙へと旅立つ。
+                    「究極のドラゴンボール編」「復讐鬼ベビー編」「究極の人造人間編」「邪悪龍編」と区切りがあり、どれも壮大な冒険や戦いそして繋がれる未来が描かれている。
+                </p>
+            </div>
+            <div class="poster fade-in">
+                <div class="title">
+                    <h1>ドラゴンボール改</h1>
+                </div>
+                <img class="work_image" src="../img/改.jpg" alt="DB改">
+                <p>
+                    ドラゴンボールシリーズ第４作品目。<br>
+                    物語自体はZと同じもので再編集版となっているため話数が少なく、タイトルの「改」は鳥山明本人が命名したものである。
+                    企画の森下孝三によると「『ドラゴンボールZを改めて見てね』という願いが込められている」とのこと。
+                </p>
+            </div>
+            <div class="poster fade-in">
+                <div class="title">
+                    <h1>ドラゴンボール超</h1>
+                </div>
+                <img class="work_image" src="../img/超.jpg" alt="DB超">
+                <p>
+                    ドラゴンボールシリーズ第５作品目。時系列は魔人ブウ編後となっている。
+                    「破壊神ビルス編」「フリーザ復活編」「破壊神シャンパ編」「“未来”トランクス編」「宇宙サバイバル編」と区切られており、サイヤ人の限界を超え神の気を得たり宇宙から時空まで広く描かれている。
+                    宇宙の命運をかけた戦いなどが繰り広げられている。
+                </p>
+            </div>
+            <div class="poster fade-in">
+                <div class="title">
+                    <h1>ドラゴンボールDAIMA</h1>
+                </div>
+                <img class="work_image" src="../img/ダイマ.png" alt="DBDAIMA">
+                <p>
+                    ドラゴンボールシリーズ第６作品目。鳥山明が携わった最後の作品となっている。
+                    悟空たちによる活躍によって魔人ブウは倒され、世界に平和が訪れた。一方、大魔界では暗黒魔界の王であったダーブラの死により、新たにキング・ゴマーが王へと即位した。ある日、ゴマーは魔人ブウを倒すほどの力の持ち主である悟空たちの存在を知り、彼らの力を恐れて地球のドラゴンボールを使って悟空らを子供の姿にさせ、デンデを連れ去ってしまう。そんな状況の中、現れた少年魔人・グロリオからの依頼を受け、デンデの救出と元の体を取り戻すため、悟空、界王神、グロリオの3人で大魔界を目指すこととなる。
+                </p>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src="./work.js"></script>
+</body>
+</html>
